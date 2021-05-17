@@ -21,32 +21,48 @@ public class JavaLinkedList
   }
  }
 
- public double getSum(  )
+ public double getSum()
  {
   double total=0;
+  for (int i = 0; i < list.size(); i++) {
+   total = total + list.get(i);
+} 
   return total;
  }
 
- public double getAvg(  )
+ public double getAvg()
  {
-  return 0;
+  double total=0,avg;
+   for (int i = 0; i < list.size(); i++) {
+      total = total + list.get(i);
+   }
+   avg=total/list.size();
+   return avg;
  }
 
  public int getLargest()
  {
-  int largest=Integer.MIN_VALUE;
-  return largest;
+  int largest=list.get(0);
+for (int i = 0; i < list.size(); i++) {
+   if(largest<list.get(i));
+   largest=list.get(i);
+}
+return largest;
  }
 
  public int getSmallest()
  {
-  int smallest = smallest=Integer.MAX_VALUE;
-  return smallest;
+   int smallest=list.get(0);
+   for (int i = 0; i < list.size(); i++) {
+      if(smallest>list.get(i))
+      smallest=list.get(i);
+   }
+return smallest;
  }
 
  public String toString()
  {
-  String output="";
-  return output;
+  String output="SUM: "+getSum()+"\nAVERAGE: "+getAvg()+"\nSMALLEST: "+getSmallest()+"\nLARGEST: "+getLargest()+"\n\n";
+return output;
  }
 }
