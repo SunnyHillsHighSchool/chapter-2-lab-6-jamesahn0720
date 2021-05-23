@@ -36,27 +36,28 @@ public class JavaLinkedList
    for (int i = 0; i < list.size(); i++) {
       total = total + list.get(i);
    }
-   avg=total/list.size();
-   return avg;
+   return total / list.size();
  }
 
  public int getLargest()
  {
-  int largest=list.get(0);
-for (int i = 0; i < list.size(); i++) {
-   if(largest<list.get(i));
-   largest=list.get(i);
-}
+int largest=Integer.MIN_VALUE;
+  for(int i = 0; i < list.size(); i++)
+  {
+    if(list.get(i)>largest)
+      largest = list.get(i);
+  }
 return largest;
  }
 
  public int getSmallest()
  {
-   int smallest=list.get(0);
-   for (int i = 0; i < list.size(); i++) {
-      if(smallest>list.get(i))
-      smallest=list.get(i);
-   }
+   int smallest = smallest=Integer.MAX_VALUE;
+  for(int i = 0; i < list.size(); i++)
+  {
+    if(list.get(i)<smallest)
+      smallest = list.get(i);
+  }
 return smallest;
  }
 
